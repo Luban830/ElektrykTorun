@@ -355,7 +355,7 @@ export default function ServicesGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <MotionDiv
               key={service.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group border border-gray-100 hover:border-blue-200"

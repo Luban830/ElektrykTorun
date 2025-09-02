@@ -1,4 +1,4 @@
-import { Zap, Lightbulb, Wrench, Shield, Home, Settings, Plug, Gauge, Building, Smartphone, Star, CheckCircle } from 'lucide-react';
+import { Zap, Lightbulb, Wrench, Shield, Home, Settings, Plug, Gauge, Building, Star, CheckCircle } from 'lucide-react';
 
 const pricingData = [
   {

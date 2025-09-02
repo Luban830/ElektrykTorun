@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence, HTMLMotionProps } from 'framer-motion';
-import { ReactNode } from 'react';
+
 
 export const MotionDiv = ({ children, ...props }: HTMLMotionProps<'div'>) => {
   return <motion.div {...props}>{children}</motion.div>;

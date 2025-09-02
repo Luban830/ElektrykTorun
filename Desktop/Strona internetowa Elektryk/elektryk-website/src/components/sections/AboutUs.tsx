@@ -1,4 +1,5 @@
 import { MotionDiv } from '@/components/ui/MotionWrapper';
+import Image from 'next/image';
 
 export default function AboutUs() {
   return (
@@ -84,7 +85,7 @@ export default function AboutUs() {
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-2">Nasze motto:</h4>
                     <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                      „Rzeczy niemożliwe robimy od ręki, na cuda trzeba chwileczkę poczekać."
+                      &ldquo;Rzeczy niemożliwe robimy od ręki, na cuda trzeba chwileczkę poczekać.&rdquo;
                     </blockquote>
                   </div>
                 </div>
@@ -108,11 +109,13 @@ export default function AboutUs() {
             <div className="relative overflow-hidden">
               {/* Kontener z animacją iskier */}
               <div className="relative">
-                <img 
-                  src="/images/zar.png" 
-                  alt="Profesjonalne usługi elektryczne" 
-                  className="w-full h-auto max-w-2xl object-cover relative z-10"
-                />
+                            <Image 
+              src="/images/zar.png" 
+              alt="Profesjonalne usługi elektryczne" 
+              width={800}
+              height={600}
+              className="w-full h-auto max-w-2xl object-cover relative z-10"
+            />
                 
                 {/* Efekt glow/rozświetlania */}
                 <div className="absolute top-1/2 left-1/2 w-3/4 h-3/4 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-yellow-400/15 via-amber-400/25 to-yellow-400/15 rounded-full blur-lg animate-pulse"></div>
