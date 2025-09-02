@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-manrope: 'Manrope', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-manrope);
+}
+
+body {
+  color: #111827;
+  background: #F9FAFB;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom text selection styles */
+::selection {
+  background-color: #FCD34D; /* yellow-300 */
+  color: #1F2937; /* gray-800 */
+}
+
+::-moz-selection {
+  background-color: #FCD34D; /* yellow-300 */
+  color: #1F2937; /* gray-800 */
+}
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+body {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor-bulb {
+  width: 32px;
+  height: 32px;
+  background-image: url('/images/kursor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1) drop-shadow(0 0 0 transparent);
+}
+
+.cursor-bulb.lit {
+  filter: 
+    brightness(2.5) 
+    drop-shadow(0 0 5px rgba(255, 255, 0, 1))
+    drop-shadow(0 0 10px rgba(255, 255, 0, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 0, 0.4))
+    drop-shadow(0 0 40px rgba(255, 255, 0, 0.2))
+    hue-rotate(0deg)
+    saturate(3)
+    contrast(1.5);
+  transform: scale(1.2);
+  animation: flash 0.5s ease-in-out;
+}
+
+@keyframes flash {
+  0% { 
+    filter: 
+      brightness(2.5) 
+      drop-shadow(0 0 5px rgba(255, 255, 0, 1))
+      drop-shadow(0 0 10px rgba(255, 255, 0, 0.8))
+      drop-shadow(0 0 20px rgba(255, 255, 0, 0.6))
+      drop-shadow(0 0 30px rgba(255, 255, 0, 0.4))
+      drop-shadow(0 0 40px rgba(255, 255, 0, 0.2))
+      hue-rotate(0deg)
+      saturate(3)
+      contrast(1.5);
+  }
+  50% { 
+    filter: 
+      brightness(4) 
+      drop-shadow(0 0 10px rgba(255, 255, 0, 1))
+      drop-shadow(0 0 20px rgba(255, 255, 0, 0.9))
+      drop-shadow(0 0 40px rgba(255, 255, 0, 0.7))
+      drop-shadow(0 0 60px rgba(255, 255, 0, 0.5))
+      drop-shadow(0 0 80px rgba(255, 255, 0, 0.3))
+      hue-rotate(0deg)
+      saturate(4)
+      contrast(2);
+  }
+  100% { 
+    filter: 
+      brightness(2.5) 
+      drop-shadow(0 0 5px rgba(255, 255, 0, 1))
+      drop-shadow(0 0 10px rgba(255, 255, 0, 0.8))
+      drop-shadow(0 0 20px rgba(255, 255, 0, 0.6))
+      drop-shadow(0 0 30px rgba(255, 255, 0, 0.4))
+      drop-shadow(0 0 40px rgba(255, 255, 0, 0.2))
+      hue-rotate(0deg)
+      saturate(3)
+      contrast(1.5);
+  }
+}
+
+/* Hide cursor on interactive elements */
+button, a, input, textarea, select {
+  cursor: none !important;
+}
+
+/* Show default cursor on mobile */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Animacje iskier dla żarówki */
+@keyframes spark-1 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-10px, -15px) scale(1);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translate(-25px, -35px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-40px, -50px) scale(0);
+  }
+}
+
+@keyframes spark-2 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(15px, -10px) scale(1);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translate(30px, -25px) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(45px, -40px) scale(0);
+  }
+}
+
+@keyframes spark-3 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-8px, 12px) scale(1);
+  }
+  70% {
+    opacity: 0.6;
+    transform: translate(-20px, 30px) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-35px, 45px) scale(0);
+  }
+}
+
+@keyframes spark-4 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(12px, 8px) scale(1);
+  }
+  65% {
+    opacity: 0.8;
+    transform: translate(25px, 20px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(40px, 35px) scale(0);
+  }
+}
+
+@keyframes spark-5 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-15px, -5px) scale(1);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate(-30px, -15px) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-45px, -25px) scale(0);
+  }
+}
+
+@keyframes spark-6 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  35% {
+    opacity: 1;
+    transform: translate(8px, -12px) scale(1);
+  }
+  75% {
+    opacity: 0.6;
+    transform: translate(18px, -25px) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, -40px) scale(0);
+  }
+}
+
+/* Klasy animacji iskier */
+.animate-spark-1 {
+  animation: spark-1 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animate-spark-2 {
+  animation: spark-2 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-spark-3 {
+  animation: spark-3 2.8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-spark-4 {
+  animation: spark-4 3.2s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-spark-5 {
+  animation: spark-5 2.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-spark-6 {
+  animation: spark-6 3.8s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
