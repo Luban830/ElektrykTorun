@@ -77,15 +77,11 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4" />
-                <span>Pon - Pt: 7:00 - 19:00</span>
+                <span>Pon - Nd: 24/7</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4" />
-                <span>Sob: 8:00 - 16:00</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="w-4 h-4" />
-                <span>Nd: 10:00 - 14:00</span>
+                <span>Całodobowo</span>
               </div>
               <div className="mt-4 p-3 bg-red-500 rounded-lg">
                 <p className="text-sm font-semibold">Awaria 24/7</p>

@@ -13,8 +13,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Elektryk Toruń - Profesjonalne usługi elektryczne | Toruń i okolice",
-  description: "Profesjonalne usługi elektryczne w Toruniu i okolicach. Instalacje, naprawy, modernizacje, oświetlenie LED, inteligentny dom. Doświadczenie, gwarancja i szybka realizacja. Toruń i okolice.",
+  title: "Elektryk Toruń – Profesjonalne Usługi Elektryczne 24/7",
+  description: "Elektryk Toruń – kompleksowe usługi: montaż, modernizacja i konserwacja instalacji. Awaryjne naprawy i szybki dojazd. Zaufaj profesjonalistom.",
   keywords: "elektryk Toruń, elektryk Warszawa, usługi elektryczne, instalacje elektryczne, naprawy elektryczne, modernizacje, oświetlenie LED, inteligentny dom, monitoring, fotowoltaika, pomiary elektryczne, Kołłątaja Toruń",
   authors: [{ name: "Elektryk Toruń" }],
   creator: "Elektryk Toruń",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Elektryk Toruń - Profesjonalne usługi elektryczne | Toruń i okolice",
-    description: "Profesjonalne usługi elektryczne w Toruniu i okolicach. Instalacje, naprawy, modernizacje, oświetlenie LED, inteligentny dom. Doświadczenie, gwarancja i szybka realizacja.",
+    title: "Elektryk Toruń – Profesjonalne Usługi Elektryczne 24/7",
+    description: "Elektryk Toruń – kompleksowe usługi: montaż, modernizacja i konserwacja instalacji. Awaryjne naprawy i szybki dojazd. Zaufaj profesjonalistom.",
     url: 'https://elektrykpro.pl',
     siteName: 'Elektryk Toruń',
     type: "website",
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elektryk Toruń - Profesjonalne usługi elektryczne | Toruń i okolice",
-    description: "Profesjonalne usługi elektryczne w Toruniu i okolicach. Instalacje, naprawy, modernizacje, oświetlenie LED.",
+    title: "Elektryk Toruń – Profesjonalne Usługi Elektryczne 24/7",
+    description: "Elektryk Toruń – kompleksowe usługi: montaż, modernizacja i konserwacja instalacji. Awaryjne naprawy i szybki dojazd.",
     images: ['/images/UX Pilot Design.png'],
   },
   robots: {
@@ -74,6 +74,8 @@ export default function RootLayout({
   return (
     <html lang="pl" className={manrope.variable}>
       <head>
+        <link rel="icon" href="/images/logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/images/logo.png" type="image/png" />
         <JsonLd />
       </head>
       <body className="antialiased">
